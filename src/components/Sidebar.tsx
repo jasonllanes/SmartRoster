@@ -154,16 +154,16 @@ const Sidebar: React.FC = () => {
         `}
             >
                 {/* Logo Section */}
-                <div className="h-20 flex items-center justify-center px-4 border-b border-gray-200 dark:border-gray-700">
+                <div className="h-42 flex items-center justify-center px-4 border-b border-gray-200 dark:border-gray-700">
                     {isOpen && (
                         <div className="flex flex-col items-center gap-2">
                             <img
                                 src="/assets/smart_roster_logo.png"
                                 alt="Smart Roster Logo"
-                                className="h-12 w-12 object-contain"
+                                className="h-32 w-32 object-contain"
                             />
                             <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                                Smart Rosters
+                                Smart Roster
                             </span>
                         </div>
                     )}
