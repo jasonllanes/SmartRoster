@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { Clock, Users, MapPin, Camera, BarChart3, Moon, Sun, LucideIcon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
+// Get base URL for assets
+const getAssetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 interface Feature {
     icon: LucideIcon;
     title: string;
@@ -29,7 +32,7 @@ const LandingPage: React.FC = () => {
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center gap-3">
                             <img
-                                src="/assets/smart_roster_logo.png"
+                                src={getAssetUrl('assets/smart_roster_logo.png')}
                                 alt="Smart Roster Logo"
                                 className="h-10 w-10 object-contain"
                             />

@@ -20,6 +20,9 @@ import {
     ChevronDown
 } from 'lucide-react';
 
+// Get base URL for assets
+const getAssetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 interface MenuItem {
     path: string;
     icon: LucideIcon;
@@ -70,7 +73,7 @@ const Sidebar: React.FC = () => {
             <div className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50 flex items-center justify-between px-4">
                 <div className="flex flex-col items-center gap-1">
                     <img
-                        src="/assets/smart_roster_logo.png"
+                        src={getAssetUrl('assets/smart_roster_logo.png')}
                         alt="Smart Roster Logo"
                         className="h-12 w-12 object-contain"
                     />
@@ -158,7 +161,7 @@ const Sidebar: React.FC = () => {
                     {isOpen && (
                         <div className="flex flex-col items-center gap-2">
                             <img
-                                src="/assets/smart_roster_logo.png"
+                                src={getAssetUrl('assets/smart_roster_logo.png')}
                                 alt="Smart Roster Logo"
                                 className="h-32 w-32 object-contain"
                             />
@@ -169,7 +172,7 @@ const Sidebar: React.FC = () => {
                     )}
                     {!isOpen && (
                         <img
-                            src="/assets/smart_roster_logo.png"
+                            src={getAssetUrl('assets/smart_roster_logo.png')}
                             alt="Smart Roster Logo"
                             className="h-10 w-10 object-contain mx-auto"
                         />
